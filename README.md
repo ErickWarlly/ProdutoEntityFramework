@@ -1,0 +1,1 @@
+Sistema Web utilizando .NET ASP.NET core (MVC6) e com uso do dotnet-ef (Entity Framework) para ser feito o Migration ao banco.

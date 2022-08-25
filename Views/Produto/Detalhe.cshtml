@@ -1,0 +1,23 @@
+@model Demostracao.Models.Produto
+
+<h2>Informações do Produto</h2>
+
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputPassword4" style="font-weight: bold;">Id: </label>
+            <label for="inputPassword4">@Html.DisplayFor(model => model.id)</label>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputEmail4" style="font-weight: bold;">Produto: </label>
+            <label for="inputPassword4">@Html.DisplayFor(model => model.descricao)</label>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputPassword4" style="font-weight: bold;">Valor R$: </label>
+            <label for="inputPassword4">@Html.DisplayFor(model => model.valor)</label>
+        </div>
+    </div>
+    <br>
+    <a href="/Produto/Index" class="btn btn-link">Voltar</a>
+    <button type="submit" class="btn btn-warning">Excluir</button>
+</form>

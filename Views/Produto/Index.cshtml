@@ -1,0 +1,37 @@
+@model IEnumerable<Demostracao.Models.Produto>
+
+@{
+    ViewData["Title"] = "Index Tela";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Produto Index</h1>
+    <br>
+    <a href="/Produto/Cadastrar" class="btn btn-warning">Cadastrar Novo Produto</a>
+    <br><br>
+    <p>Tabela de Produtos</p>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Valor R$</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@Html.DisplayFor(modelItem => item.id)</th>
+                    <td>@Html.DisplayFor(modelItem => item.descricao)</td>
+                    <td>@Html.DisplayFor(modelItem => item.valor)</td>
+                    <td>
+                        <a asp-action="Detalhe" asp-route-index="@item.id" class="btn btn-dark">Detalhes</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
